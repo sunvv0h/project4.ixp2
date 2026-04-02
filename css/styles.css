@@ -44,6 +44,7 @@ body {
 	font-weight: 700;
 	letter-spacing: .02em;
 	font-family: 'Major Mono Display';
+    font-size: 1.75rem;
 }
 
 .main-nav {
@@ -51,7 +52,7 @@ body {
 }
 
 .main-nav a {
-	margin-left: 1rem;
+	margin-left: .95rem;
 	color: var(--muted);
 	text-decoration: none;
 }
@@ -144,6 +145,11 @@ body {
 
 .card-text {
     margin: 1rem 0 1rem 0;
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 .5rem;
+    }
 }
 
 .interview aside .card .muted {
@@ -211,6 +217,7 @@ figure, .gallery figure {
 
 .content p { 
     margin: 1.5rem 0; 
+    line-height: 1.75rem;
 }
 
 .wrap figure figcaption { 
@@ -226,7 +233,7 @@ figure, .gallery figure {
 
 .bio { 
     font-size: .95rem; 
-    color: var(--muted); 
+    color: var(--text); 
     margin: .9rem 0 1.25rem; 
 }
 
@@ -309,6 +316,7 @@ h1, h2, h3 {
 @media (min-width: 720px) { 
 
     .interview-hero h1 { 
+        font-size: 2rem;
         margin-top: 1.5rem; 
     } 
 }
@@ -317,6 +325,7 @@ h1, h2, h3 {
     
     .bio { 
         margin-bottom: 1.5rem; 
+        color: var(--text);
     } 
 }
 
@@ -352,5 +361,10 @@ h1, h2, h3 {
 
 .muted-link .muted { 
     color: var(--muted); 
+}
+
+.interview-layout .content strong {
+    font-size: 2rem;
+    line-height: 1.8rem;
 }
 
