@@ -1,0 +1,356 @@
+:root {
+	--bg: #F7EBFA;
+	--text: #301035;
+	--muted: #722380;
+	--accent: #320F38;
+	--card: #efdaf3;
+	--border: #ddd;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background: var(--bg);
+	color: var(--text);
+	line-height: 1.45;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	transition: background-color .12s linear, color .12s linear;
+}
+
+.wrap {
+	max-width: 56.25rem;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.site-header {
+	border-bottom: 1px solid #e6e6e6;
+	background: transparent;
+	position: relative;
+}
+
+.site-header .wrap {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.brand {
+	font-weight: 700;
+	letter-spacing: .02em;
+	font-family: 'Major Mono Display';
+}
+
+.main-nav {
+	display: none;
+}
+
+.main-nav a {
+	margin-left: 1rem;
+	color: var(--muted);
+	text-decoration: none;
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+
+.navigation button {
+	background: transparent;
+	border: .0625rem solid var(--border);
+	padding: 0 .6rem;
+	border-radius: .25rem;
+	height: 2.25rem;
+	display: inline-flex;
+	align-items: center;
+	gap: .5rem;
+	color: var(--text);
+}
+
+.navigation .js-menu-trigger { 
+    padding: 0 .4rem; 
+}
+
+.navigation .js-menu-trigger svg { 
+    display: block; 
+    width: 1.25rem; 
+    height: 1.25rem; 
+}
+
+.navigation svg, .icon, .site-header svg { 
+    fill: currentColor; 
+    stroke: currentColor; 
+}
+
+.landing-title { 
+    font-size: 1.6rem; 
+    margin: 1rem 0 .25rem; 
+}
+
+.description { 
+    color: var(--muted); 
+    margin-bottom: 2rem; 
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 1rem; 
+}
+
+.card {
+	background: var(--card);
+	padding: 1rem;
+	border-radius: 6px;
+	transition: background-color .18s ease, color .18s ease;
+}
+
+.card img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 4px; 
+}
+
+.card h2 { 
+    font-size: 1.05rem; 
+    margin: .6rem 0 .2rem; 
+}
+
+.muted { 
+    color: var(--muted); 
+    font-size: .9rem; 
+}
+
+.card .muted {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .6rem;
+}
+
+.card .muted .date {
+    color: var(--muted);
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.card-text {
+    margin: 1rem 0 1rem 0;
+}
+
+.interview aside .card .muted {
+    display: block;
+    padding-left: 0;
+}
+
+.interview aside .card .muted li {
+    display: block;
+    text-align: left;
+    margin: .35rem 0;
+    list-style-position: inside;
+}
+
+.placeholder { 
+    height: 10rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background: var(--bg); 
+    border-radius: .25rem; }
+
+.site-footer { 
+    border-top: 1px solid #e6e6e6; 
+    padding: 1rem 0; 
+    margin-top: 2rem; color: var(--muted); 
+    background: var(--card); 
+}
+
+.site-footer .wrap { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.interview-hero { 
+    display: block; 
+    margin: 1.2rem 0; 
+}
+
+.interview-hero img { 
+    width: 100%; 
+    max-width: 40rem; 
+    height: auto; 
+    display: block; 
+}
+
+.participants { 
+    margin-top: .75rem; 
+    color: var(--muted); 
+    font-size: .95rem; 
+}
+
+figure, .gallery figure { 
+    margin: 1.25rem 0; 
+}
+
+.gallery img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: .25rem; 
+    max-width: 40rem; 
+}
+
+.content p { 
+    margin: 1.5rem 0; 
+}
+
+.wrap figure figcaption { 
+    color: var(--muted); 
+    font-style: italic;
+}
+
+.interview-meta { 
+    color: var(--muted); 
+    font-size: .95rem; 
+    margin-bottom: 1rem; 
+}
+
+.bio { 
+    font-size: .95rem; 
+    color: var(--muted); 
+    margin: .9rem 0 1.25rem; 
+}
+
+.pull-quote { 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+    margin: 1rem 0; 
+}
+
+body.dark {
+	--bg: #120514;
+	--text: #e5d4e9;
+	--muted: #90539b;
+	--accent: #e5d4e9;
+	--card: #320F38;
+	--border: #52195C;
+}
+
+.site-header.show-menu .main-nav {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	background: var(--card);
+	padding: .8rem 1rem;
+	box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.site-header .main-nav a { 
+    display: block; 
+    padding: .4rem 0; 
+}
+
+@media (min-width: 720px) {
+	.grid { grid-template-columns: repeat(2, 1fr); }
+	.wrap { padding: 2rem; }
+	.landing-title { font-size: 2rem; }
+	.main-nav { display: flex; }
+	.site-header .main-nav a { display: inline-block; }
+
+	.site-header.show-menu .main-nav { 
+        position: static; 
+        display: flex; 
+        box-shadow: none; 
+        background: transparent; 
+        padding: 0; 
+    }
+
+	.navigation .js-menu-trigger { display: none; }
+}
+
+h1, h2, h3 { 
+    line-height: 1.15; 
+    color: var(--text); 
+    font-family: 'Major Mono Display'; 
+}
+
+.interview-layout { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 1.25rem; 
+}
+
+@media (min-width: 880px) { 
+    .interview-layout { 
+        grid-template-columns: 2fr 320px; 
+    } 
+}
+
+@media (min-width: 720px) {
+    .interview-layout { grid-template-columns: 2fr 320px; }
+    .interview-layout > aside { align-self: start; }
+}
+
+.interview-hero h1 { 
+    margin: 1.25rem 0 .6rem; 
+}
+
+@media (min-width: 720px) { 
+
+    .interview-hero h1 { 
+        margin-top: 1.5rem; 
+    } 
+}
+
+@media (min-width: 720px) { 
+    
+    .bio { 
+        margin-bottom: 1.5rem; 
+    } 
+}
+
+.participants { 
+    margin: 1rem 0 1.25rem; 
+}
+
+@media (min-width: 720px) { 
+
+    .participants { 
+        margin: 1.25rem 0 1.5rem; 
+    } 
+}
+
+.content p { 
+    margin: 1.5rem 0; 
+}
+
+@media (min-width: 720px) { 
+    
+    .content p { 
+        margin: 2.5rem 0; 
+    } 
+}
+
+.interview aside .card { 
+    padding-top: 1rem; padding-bottom: 1rem; 
+}
+
+.interview aside .card .subhead { 
+    margin: 0 0 .75rem; 
+}
+
+.muted-link .muted { 
+    color: var(--muted); 
+}
+
